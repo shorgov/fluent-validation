@@ -12,14 +12,12 @@ public class ShowCase {
 
     private static void invokeSomeDummyMethod(String firstName, String lastName, String addressLine, int age) {
 
-        Validation.ofNull()
+        Validation.createEmpty()
                 .isNull(firstName, "firstName is null")
                 .isNull(lastName, "lastName is null")
                 .check()
                 .isNull(addressLine, "addressLine is null")
                 .notGreaterThan(age, 120, "age exceeds the limit of 100")
                 .check();
-
     }
-
 }

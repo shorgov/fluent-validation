@@ -10,7 +10,6 @@ public class Validation {
         errors.append("\n").append(Objects.requireNonNull(message));
     }
 
-
     public boolean hasErrors() {
         return !errors.isEmpty();
     }
@@ -19,7 +18,7 @@ public class Validation {
         return errors.toString();
     }
 
-    public static Validation ofNull() {
+    public static Validation createEmpty() {
         return null;
     }
 
